@@ -1,0 +1,11 @@
+package com.mysales.customer.config;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+
+
+@FeignClient(name = "offer-service",url = "http://localhost:8002/mysales/v1")
+public interface OfferClientConfig {
+
+	public OfferDto getOfferById(@PathVariable int offerId);
+}

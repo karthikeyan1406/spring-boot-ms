@@ -1,0 +1,18 @@
+package com.mysales.offer.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/mysales/v1")
+public class OfferController {
+
+	@PostMapping("/makeOffer/{custId}")
+	public String createOffer(@PathVariable String custId){
+		
+		return null;
+	}
+	
+}

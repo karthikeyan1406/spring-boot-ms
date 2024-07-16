@@ -1,0 +1,6 @@
+server:
+  port: 8443
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

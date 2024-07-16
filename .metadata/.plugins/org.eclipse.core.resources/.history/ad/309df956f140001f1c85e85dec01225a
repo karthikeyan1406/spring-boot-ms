@@ -1,0 +1,5 @@
+package com.mysales.customer.service;
+
+public class CustomerService {
+
+}

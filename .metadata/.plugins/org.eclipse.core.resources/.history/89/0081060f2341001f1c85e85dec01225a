@@ -1,0 +1,20 @@
+package com.mysales.offer.service;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mysales.offer.model.Offer;
+import com.mysales.offer.repository.OfferRepository;
+
+@Service
+public class OfferService {
+	@Autowired
+	OfferRepository offerRepo;
+	
+	public String createOffer(Offer offer) {
+		offerRepo.save(offer);
+		return "success";
+	}
+}

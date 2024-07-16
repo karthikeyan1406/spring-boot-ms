@@ -1,0 +1,10 @@
+package com.mysales.customer.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class customer {
+
+	public int custId;
+	
+}

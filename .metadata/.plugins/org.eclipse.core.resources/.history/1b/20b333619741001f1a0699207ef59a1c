@@ -1,0 +1,5 @@
+package com.mysales.customer.dto;
+
+public class OfferDto {
+
+}
