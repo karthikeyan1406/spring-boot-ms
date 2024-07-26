@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.mysales.customer.dto.OfferDto;
 
 
-@FeignClient(name = "offer-service",url = "http://localhost:8002/mysales/v1",
+@FeignClient(name = "offer-service",
 configuration = offerFeignClientConfig.class)
 public interface OfferClientConfig {
 	
-	@GetMapping("/getOfferByCustId/{custId}")
+	@GetMapping("/mysales/v1/offer/getOfferByCustId/{custId}")
 	public OfferDto getOfferByCustId(@PathVariable String custId);
 }

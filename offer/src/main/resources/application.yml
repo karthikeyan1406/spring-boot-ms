@@ -1,7 +1,16 @@
 server:
   port: 8002
-
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8443/eureka/
+      
 spring:
+  application:
+    name: offer-service
   datasource:
     url: jdbc:mysql://localhost:3306/mysales
     username: root
@@ -11,8 +20,8 @@ spring:
     show-sql: true
     hibernate:
         ddl-auto: update
-        
-  security:
-    user:
-      name: mysales
-      password: pwd1	
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

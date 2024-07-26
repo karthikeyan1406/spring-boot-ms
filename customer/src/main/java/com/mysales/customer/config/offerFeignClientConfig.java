@@ -23,7 +23,7 @@ public class offerFeignClientConfig {
 	   }
 	   @Bean
 	   BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
-	      return new BasicAuthRequestInterceptor("mysales", "pwd2");
+	      return new BasicAuthRequestInterceptor("mysales", "pwd1");
 	   }
 	   
 	   @Bean

@@ -1,0 +1,36 @@
+server:
+ port: 8000
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8443/eureka/
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+        #Customer service route config
+        - id: customer
+          uri: lb://customer-service
+          predicates:
+            - Path=/mysales/v1/customer/**
+        #Offer service route config
+        - id: offer
+          uri: lb://offer-service
+          predicates:
+            - Path=/mysales/v1/offer/** 
+        #Eureka service route config
+        - id: eureka
+          uri: http://localhost:8443
+          predicates:
+            - Path=/eureka/** 
+
+
+      
+    

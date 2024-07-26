@@ -14,7 +14,7 @@ eureka:
          
 spring:
   application:
-    name: customer
+    name: customer-service
   datasource:
     url: jdbc:mysql://localhost:3306/mysales
     username: root
@@ -24,4 +24,9 @@ spring:
     show-sql: true
     hibernate:
         ddl-auto: update
-    
+        
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
