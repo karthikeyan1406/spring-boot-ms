@@ -1,8 +1,0 @@
-server:
-  port: 8443
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    service-url:
-      default-Zone: http://localhost:${server.port}/eureka
